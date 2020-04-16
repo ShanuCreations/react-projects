@@ -1,0 +1,14 @@
+import React from "react";
+
+const ImageList = props => {
+  //Render images list iterating via map
+  const images = props.images.map(image => {
+    return (
+      <img key={image.id} src={image.urls.regular} alt={image.description} />
+    );
+  });
+
+  return <div>{images} </div>;
+};
+
+export default ImageList;
