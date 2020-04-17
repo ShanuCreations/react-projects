@@ -1,4 +1,5 @@
 import React from "react";
+import "./SearchBar.css";
 
 class SearchBar extends React.Component {
   state = { term: "" };
@@ -8,14 +9,9 @@ class SearchBar extends React.Component {
     this.props.searchSubmit(this.state.term);
   };
 
-  style = {
-    background: "#4b9dc4",
-    textalign: "center"
-  };
-
   render() {
     return (
-      <div className="ui segment" style={this.style}>
+      <div className="ui segment search-bar" style={{ background: "#4b9dc4" }}>
         <form className="ui form" onSubmit={this.onFormSubmit}>
           <div className="field">
             <label>Images Search</label>
@@ -23,7 +19,7 @@ class SearchBar extends React.Component {
               type="text"
               value={this.state.term}
               onChange={e => this.setState({ term: e.target.value })}
-              placeholder="Enter any item like Birds, Food, Flowers to see the magic ..."
+              placeholder="Enter any word like Birds, Food, Flowers to see the magic ..."
             />
           </div>
         </form>

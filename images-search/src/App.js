@@ -6,7 +6,7 @@ import ImageList from "./components/ImageList/ImageList";
 class App extends React.Component {
   state = { images: [] };
 
-  //Fetch images from Unsplash using Async Await
+  //Fetch images from Unsplash using Axios
   onSearchSubmit = async term => {
     const response = await axios.get("https://api.unsplash.com/search/photos", {
       params: { query: term },

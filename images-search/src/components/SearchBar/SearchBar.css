@@ -1,0 +1,12 @@
+.search-bar div {
+  font-size: 25px;
+  text-align: center;
+  word-spacing: 5px;
+  padding: 10px;
+}
+
+input [type="text"],
+label {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding: 10px;
+}
